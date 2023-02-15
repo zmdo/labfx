@@ -4,51 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8cf972c-9558-499a-9bc1-168ee3fa41d5" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/LayoutBinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/LabButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/MenuTabPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/MenuUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/PenetrablePane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/StaffGauge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/TButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockPos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockTitleBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/IDockPosUse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/labButton/lab-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/labButton/lab-button.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuTabPane/menu-tab-pane.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuTabPane/menu-tab-pane.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuUnit/menu-unit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuUnit/menu-unit.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/staffGauge/staff-gauge.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/staffGauge/staff-gauge.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/tButton/tbutton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/tButton/tbutton.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/center.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/docknode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/maximize.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/restore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="b8cf972c-9558-499a-9bc1-168ee3fa41d5" name="变更" comment="init commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labfx-controls/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labfx-controls/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labfx-controls/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +18,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ec0feb83-f3ef-4deb-94c4-a3ab19cb86ab" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\Maven\settings-zmdo-publisher.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="workspaceImportEnabled" value="true" />
@@ -83,7 +51,8 @@
     "last_opened_file_path": "E:/Java/labfx/labfx-controls/src/main/resources",
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Groovy compiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -126,6 +95,18 @@
       <option name="presentableId" value="Default" />
       <updated>1676379092830</updated>
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1676477584801</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676477584801</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
 </project>

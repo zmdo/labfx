@@ -12,4 +12,5 @@ module com.tricolorfire.labfx.controls {
     
     exports com.tricolorfire.labfx.control;
     exports com.tricolorfire.labfx.dockFX;
+
 }
