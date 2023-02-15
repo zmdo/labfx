@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8cf972c-9558-499a-9bc1-168ee3fa41d5" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/LayoutBinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/LabButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/MenuTabPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/MenuUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/PenetrablePane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/StaffGauge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/TButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockPos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/DockTitleBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/dockFX/IDockPosUse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/labButton/lab-button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/labButton/lab-button.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuTabPane/menu-tab-pane.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuTabPane/menu-tab-pane.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuUnit/menu-unit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/menuUnit/menu-unit.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/staffGauge/staff-gauge.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/staffGauge/staff-gauge.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/tButton/tbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/control/tButton/tbutton.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/center.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/docknode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/maximize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/restore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/com/tricolorfire/labfx/dockFX/top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2LjKXabQwc93FwXZf16NAXrcPtN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "E:/Java/labfx/labfx-controls/src/main/resources",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java\labfx\labfx-controls\src\main\resources" />
+      <recent name="E:\Java\labfx\labfx-controls\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Java\labfx\labfx-controls\src\main\resources\com\tricolorfire\labfx" />
+      <recent name="E:\Java\labfx\labfx-controls\src\main\resources\com.tricolorfire.labfx" />
+      <recent name="E:\Java\labfx\labfx-controls\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DockFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tricolorfire.labfx.dockFX.DockFX" />
+      <module name="labfx-controls" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tricolorfire.labfx.dockFX.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.DockFX" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b8cf972c-9558-499a-9bc1-168ee3fa41d5" name="变更" comment="" />
+      <created>1676379092830</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676379092830</updated>
+    </task>
+    <servers />
+  </component>
+</project>

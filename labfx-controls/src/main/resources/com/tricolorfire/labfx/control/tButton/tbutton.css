@@ -1,0 +1,28 @@
+.tbutton{
+
+	/* 字体设置 */
+	-fx-text-alignment: center;
+	-fx-text-fill: #000000;
+	
+	/* 去掉默认边框 */
+	-fx-background-insets: 0;
+	-fx-background-color: #FFFFFF00; 
+	
+	/* 设置边框占位 */
+	-fx-border-radius: 5px;
+    -fx-border-width:  1px;
+    -fx-border-color:  #aaaaaa00;
+    
+}
+
+/* 按钮被点燃 */
+.tbutton:hover {
+    -fx-border-color:  #aaaaaa; 
+	-fx-background-color: #FFFFFF40;
+}
+
+/* 按钮被按下 */
+.tbutton:pressed {
+	-fx-border-color:  #aaaaaa;
+	-fx-background-color: #00000010;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TabPane?>
+
+<fx:root 
+type="javafx.scene.control.TabPane" 
+
+stylesheets="@menu-tab-pane.css"
+styleClass="menu-tab-pane"
+tabClosingPolicy="UNAVAILABLE"
+side="TOP"
+
+xmlns:fx="http://javafx.com/fxml">
+</fx:root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.Pane?>
+<fx:root 
+type="javafx.scene.layout.Pane"
+
+stylesheets="@staff-gauge.css"
+styleClass="staff-gauge"
+
+xmlns:fx="http://javafx.com/fxml">
+	<children>
+		<Canvas fx:id="ruleCanvas"></Canvas>
+		<Canvas fx:id="markLayer"></Canvas>
+	</children>
+</fx:root>

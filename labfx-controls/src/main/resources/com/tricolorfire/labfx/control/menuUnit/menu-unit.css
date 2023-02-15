@@ -1,0 +1,34 @@
+ /* 单元设置 */
+.menu-unit {
+	/* 边界设置 */
+	-fx-border-color: #AFAFAF;
+	-fx-border-width: 0 1px 0 0;
+}
+
+/* 单元的内容 */
+.menu-unit-content {
+	-fx-spacing: 8;
+	-fx-padding: 0 5px 3px 5px;
+}
+
+/* 标签框架设置 */
+.menu-unit-label {
+	/* 标签居中 */
+	-fx-alignment: top_center;
+	/* 背景颜色渐变 */
+	-fx-background-color: linear-gradient(to right,#FFFFFF30,#FFFFFF4A,#FFFFFF30);
+	/* 让文字顶住上面 */
+	-fx-padding: -2px 0 1px 0;
+	
+	/* 边界设置 */
+	-fx-border-color: #999999;
+	-fx-border-width: 0 0 1px 0;
+	
+}
+
+/* 标签文字设置 */
+.menu-unit-label .label{
+	-fx-pref-height: 3px;
+	-fx-font-size: 11px;
+	-fx-text-fill: #707070;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.tricolorfire.labfx.control.TButton?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<fx:root 
+type="com.tricolorfire.labfx.control.TButton"
+stylesheets="@lab-button.css"
+styleClass="lab-button"
+contentDisplay="top" 
+mnemonicParsing="false" 
+maxWidth="50.0"
+wrapText="true"
+graphicTextGap="8"
+
+xmlns:fx="http://javafx.com/fxml">
+
+     <font></font>
+     <graphic>
+       <ImageView
+       	fx:id="innerImageView"
+       	pickOnBounds="true" 
+       	preserveRatio="true">
+       </ImageView>
+     </graphic>
+
+</fx:root>

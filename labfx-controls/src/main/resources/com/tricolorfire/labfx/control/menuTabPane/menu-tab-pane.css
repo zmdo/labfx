@@ -1,0 +1,119 @@
+/* 选项卡面板设置 */
+.menu-tab-pane {
+    /* 文字设置 */
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 13px;
+    
+    /*选项卡按钮 大小控制 */
+    -fx-tab-min-width:77px;
+    -fx-tab-max-width:77px;
+    -fx-tab-min-height:22px;
+    -fx-tab-max-height:22px;
+    
+    /* 选项卡边界控制 */
+    -fx-padding: -3px -3px 0px -4px;
+    
+    /* 面板背景颜色 */
+    -fx-background-color: 
+    linear-gradient(#E0E0E0,#DDDDDD,#CCCCCC,#BBBBBB,#AAAAAA);
+    
+    /* 
+     * #E0E0E0,#DDDDDD,#CCCCCC,#B8B8B8,#A2A2A2
+     * #DDDDDD,#C9C9C9,#B5B5B5,#A2A2A2
+     * #E0E0E0,#DDDDDD,#CCCCCC,#BBBBBB,#AAAAAA
+     * #E0E0E0,#DDDDDD,#D0D0D0,#ABABAB
+     */
+}
+
+/* 修改顶栏的背景颜色 */
+.menu-tab-pane>*.tab-header-area>*.tab-header-background 
+{
+    -fx-background-color: -fx-outer-border, -fx-text-box-border, 
+    linear-gradient(to right,#800000, #FF0000,#800000);
+    
+    /* 蓝色背景
+     * linear-gradient(to right,#00233D, #174F88,#00233D);
+     */
+}
+
+/* 选项卡按钮初始样式设置 */
+.menu-tab-pane .tab {
+	
+	/* 选项卡按钮-背景颜色，区别于下面的 "底色"，这个颜色指的是选项卡按钮表面的颜色 */
+	-fx-color: 	#CC0000;
+	/* 蓝色
+	 * #104070
+	 */
+	
+	/* 选项卡按钮-底色，指的是按钮按下后的颜色 */
+	-fx-background:#E0E0E0;
+	
+	/* 圆角 */
+	-fx-background-radius: 5px 5px 0 0;
+	
+	/* 阴影 */
+    -fx-effect: innershadow(one-pass-box, rgba(0, 0, 0, 0.1), 6, 0, 0, -6);
+    
+    /* 如果不加上这个，按钮与面板间会出现重合，很难看 */
+	-fx-background-insets:0 2px 1px 0;
+	
+	/* 边框(伪高光) */
+	-fx-border-radius: 7px 9px 0 0;
+    -fx-border-width: 1px 0 0 0;
+    -fx-border-color: #ffffff60;
+    
+	/* 高光的另一种形式，但会跟阴影发生冲突 
+	 * -fx-background-insets:0;
+	 * -fx-effect: innershadow(one-pass-box, rgba(255, 255, 255, 0.4), 1, 0, 0, 1);
+     */
+}
+
+
+
+/* 选项卡按钮中文本的颜色  */
+.menu-tab-pane .tab-label {
+    -fx-text-fill: #e6e6e6;
+}
+
+ /* 选项卡按钮 : 点燃颜色 (当鼠标放在选项卡按钮上方时称为 "点燃" ) */
+.menu-tab-pane .tab:hover {
+	-fx-color: #FF4500;
+	/* 蓝色
+	 * #225588
+	 */
+}
+
+
+
+/* 选项卡按钮选中时设置背景颜色 */
+.menu-tab-pane .tab:selected {
+	/* 去除阴影特效 */
+    -fx-effect:none;
+    
+    /* 将按钮与面板的距离归零，而按钮间的距离不变*/
+    -fx-background-insets:0 2px 0 0;
+}
+
+/* 子代选择器，选项卡按钮 选中的时候选择其子元素 tab-label */
+.menu-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #000000ff;
+}
+
+/* 选项卡按钮选中的时候的边框样式 */
+.menu-tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-width: 0;
+    
+    /* 选中时自定义的边框
+     * -fx-border-radius: 5px 5px 0 0;
+     * -fx-border-width: 1px 1px 1px 1px;
+     * -fx-border-color: #225588;
+     */
+}
+
+
+/* 临时选项卡按钮初始样式设置 */
+.menu-tab-pane .tmp-tab {
+	
+	/* 选项卡按钮-背景颜色，区别于 "底色"，这个颜色指的是选项卡按钮表面的颜色 */
+	-fx-color: 	#FFFFFF2A;
+}

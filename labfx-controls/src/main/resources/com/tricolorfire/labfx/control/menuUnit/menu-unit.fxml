@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+
+<fx:root 
+type="javafx.scene.layout.BorderPane"
+
+stylesheets="@menu-unit.css"
+styleClass="menu-unit"
+
+xmlns:fx="http://javafx.com/fxml">
+	<center>
+		<HBox fx:id="contentHBox" styleClass="menu-unit-content">
+		</HBox>
+	</center>
+	<bottom>
+		<HBox styleClass="menu-unit-label">
+			<children>
+			<Label fx:id="titleLabel"></Label>
+			</children>
+		</HBox>
+	</bottom>
+</fx:root>
