@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8cf972c-9558-499a-9bc1-168ee3fa41d5" name="变更" comment="init commit">
+    <list default="true" id="b8cf972c-9558-499a-9bc1-168ee3fa41d5" name="变更" comment="update pom">
+      <change afterPath="$PROJECT_DIR$/labfx-controls/src/main/resources/META-INF/manifest.mf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labfx-controls/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labfx-controls/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labfx-controls/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/LayoutBinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/LayoutBinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/StaffGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/labfx-controls/src/main/java/com/tricolorfire/labfx/control/StaffGauge.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,11 +102,19 @@
       <option name="project" value="LOCAL" />
       <updated>1676477584801</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update pom">
+      <created>1676487298514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676487298514</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="update pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pom" />
   </component>
 </project>

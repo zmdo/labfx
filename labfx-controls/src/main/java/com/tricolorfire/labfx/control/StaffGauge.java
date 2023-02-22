@@ -73,7 +73,7 @@ public class StaffGauge extends Pane{
 	
 	private Direction direction;		//标尺方向
 	
-	private double unitLenghtPower;     //单位长度放大倍数
+	private double unitLengthPower;     //单位长度放大倍数
 	private double scaleNumberPower;    //刻度数值放大倍数
 	private double scaleUnit[];         //刻度单位,按从小到大排列
 	                                    //计量方案如下: 1.0 - 10.0
@@ -84,13 +84,13 @@ public class StaffGauge extends Pane{
 	private double absLTX,absLTY;       //左上角相对于应用的绝对坐标
 	private double absRBX,absRBY;       //右下角相对于应用的绝对坐标
 	
-	private double unitLenght;          //单位长度
+	private double unitLength;          //单位长度
 	//private double ruleLenght;        //标尺长度(单位为像素)
 	//private double ruleStart,ruleEnd; //标尺的刻度开始显示的位置，结束显示的位置
 	
-	private boolean limitUnitLenght;    //是否限制单位长度[true限制,false不限制]
-	private double maxUnitLenght;       //最大单位长度
-	private double minUnitLenght;       //最小单位长度
+	private boolean limitUnitLength;    //是否限制单位长度[true限制,false不限制]
+	private double maxUnitLength;       //最大单位长度
+	private double minUnitLength;       //最小单位长度
 	
 	private boolean absoluteScale;      //对刻度取绝对值[true:取绝对值,false:不取绝对值]
 	private boolean showScaleText;      //刻度数值显示
@@ -167,13 +167,13 @@ public class StaffGauge extends Pane{
 		//TODO 默认初始化设置
 		showScaleText = true;
 		showMarkLine = true;
-		limitUnitLenght = true;
+		limitUnitLength = true;
 		cycleScale = CycleMode.NONE;
-		unitLenghtPower = DEFAULT_UNIT_LENGHT_POWER;
+		unitLengthPower = DEFAULT_UNIT_LENGHT_POWER;
 		scaleNumberPower = DEFAULT_SCALE_NUMBER_POWER;
-		unitLenght = DEFAULT_UNIT_LENGHT;
-		maxUnitLenght = DEFAULT_MAX_UNIT_LENGHT;
-		minUnitLenght = DEFAULT_MIN_UNIT_LENGHT;
+		unitLength = DEFAULT_UNIT_LENGHT;
+		maxUnitLength = DEFAULT_MAX_UNIT_LENGHT;
+		minUnitLength = DEFAULT_MIN_UNIT_LENGHT;
 		//颜色设置
 		tickMarkColor = DEFAULT_TICK_MARK_COLOR;
 		ruleBackgroundColor = DEFAULT_RULE_BACKGROUND_COLOR;
@@ -313,7 +313,7 @@ public class StaffGauge extends Pane{
 	private void updateULPandSNP() {
 		//刻度数字单位大小设置
 		snp = scaleNumberPower!=0?scaleNumberPower:1;
-		ulp = unitLenghtPower!=0?unitLenghtPower:1;
+		ulp = unitLengthPower !=0? unitLengthPower :1;
 		if(cycleScale == CycleMode.ADAPTION) {
 			double ruleLenght ;
 			switch(direction) {
@@ -326,16 +326,16 @@ public class StaffGauge extends Pane{
 			if(ruleLenght > 0) {
 				double ul = ruleLenght/cycleSize;
 				snp = 1;
-				ulp = ul/unitLenght;
+				ulp = ul/ unitLength;
 			}
-		} else if(limitUnitLenght) {//如果限制单位大小
-			double now = unitLenght*ulp;
-			if(now < minUnitLenght) {
-				snp = scaleNumberPower*(minUnitLenght/now);
-				ulp = minUnitLenght/unitLenght;
-			} else if(now > maxUnitLenght) {
-				snp = scaleNumberPower*(maxUnitLenght/now);
-				ulp = maxUnitLenght/unitLenght;
+		} else if(limitUnitLength) {//如果限制单位大小
+			double now = unitLength *ulp;
+			if(now < minUnitLength) {
+				snp = scaleNumberPower*(minUnitLength /now);
+				ulp = minUnitLength / unitLength;
+			} else if(now > maxUnitLength) {
+				snp = scaleNumberPower*(maxUnitLength /now);
+				ulp = maxUnitLength / unitLength;
 			}
 		}
 	}
@@ -386,12 +386,12 @@ public class StaffGauge extends Pane{
 
 	//计算位置
 	private double computePosition(double p) {
-		if(scaleUnit[0]==0 || unitLenght == 0) {
+		if(scaleUnit[0]==0 || unitLength == 0) {
 			System.out.println(" scaleUnit[0] 或 unitLenght 不能为0");
 			return 0;
 		}
 		double realScaleUnit = scaleUnit[0]*snp;
-		double realUnitLenght = unitLenght*ulp;
+		double realUnitLenght = unitLength *ulp;
 		
 		//计算位置
 		double num = (p - origin)/realUnitLenght;
@@ -410,12 +410,12 @@ public class StaffGauge extends Pane{
 		if(ulp == 0d || snp == 0d) {
 			updateULPandSNP();
 		}
-		if(scaleUnit[0]==0 || unitLenght == 0) {
+		if(scaleUnit[0]==0 || unitLength == 0) {
 			System.out.println(" scaleUnit[0] 或 unitLenght 不能为0");
 			return;
 		}
 		double realScaleUnit = scaleUnit[0]*snp;
-		double realUnitLenght = unitLenght*ulp;
+		double realUnitLenght = unitLength *ulp;
 		
 		//获取对应s的 像素坐标
 		double tmp = (s/realScaleUnit)*realUnitLenght;
@@ -552,12 +552,12 @@ public class StaffGauge extends Pane{
 		
 		//刻度数字单位大小设置
 		updateULPandSNP();
-		if(scaleUnit[0]==0 || unitLenght == 0) {
+		if(scaleUnit[0]==0 || unitLength == 0) {
 			System.out.println(" scaleUnit[0] 或 unitLenght 不能为0");
 			return;
 		}
 		double realScaleUnit = scaleUnit[0]*snp;
-		double realUnitLenght = unitLenght*ulp;
+		double realUnitLenght = unitLength *ulp;
 		
 		//设置开始位置
 		double start = 0;
@@ -609,7 +609,7 @@ public class StaffGauge extends Pane{
 		//反向画坐标 循环数值判定
 		for(double i = start; origin + i*realUnitLenght > absLTX; i--) {
 			//判断越界
-			if(origin + i*unitLenght > getWidth() - absRBX) continue;
+			if(origin + i* unitLength > getWidth() - absRBX) continue;
 			
 			double startX = origin + i*realUnitLenght;
 			if(i%halfN != 0) {
@@ -699,12 +699,12 @@ public class StaffGauge extends Pane{
 		
 		//刻度数字单位大小设置
 		updateULPandSNP();
-		if(scaleUnit[0]==0 || unitLenght == 0) {
+		if(scaleUnit[0]==0 || unitLength == 0) {
 			System.out.println(" scaleUnit[0] 或 unitLenght 不能为0");
 			return;
 		}
 		double realScaleUnit = scaleUnit[0]*snp;
-		double realUnitLenght = unitLenght*ulp;
+		double realUnitLenght = unitLength *ulp;
 		
 		//设置开始位置
 		double start = 0;
@@ -758,7 +758,7 @@ public class StaffGauge extends Pane{
 		//反向画坐标 循环数值判定
 		for(double i = start; origin + i*realUnitLenght > absLTY; i--) {
 			//判断越界
-			if(origin + i*unitLenght > getHeight() - absRBY) continue;
+			if(origin + i* unitLength > getHeight() - absRBY) continue;
 			
 			double startY = origin + i*realUnitLenght;
 			if(i%halfN != 0) {
@@ -803,14 +803,14 @@ public class StaffGauge extends Pane{
 	
 	//放大倍数，坐标原点变换
 	public void scaleChange(double p,double origin) {
-		this.unitLenghtPower *= p;
+		this.unitLengthPower *= p;
 		this.origin = origin;
 		redraw();
 	}
 	
 	//放大倍数，坐标原点变换
 	public void change(double p,double origin) {
-		this.unitLenghtPower = p;
+		this.unitLengthPower = p;
 		this.origin = origin;
 		redraw();
 	}
@@ -911,12 +911,12 @@ public class StaffGauge extends Pane{
 		this.absLTY = absLTY;
 	}
 
-	public double getUnitLenght() {
-		return unitLenght;
+	public double getUnitLength() {
+		return unitLength;
 	}
 
-	public void setUnitLenght(double unitLenght) {
-		this.unitLenght = unitLenght;
+	public void setUnitLength(double unitLenght) {
+		this.unitLength = unitLenght;
 	}
 
 	public boolean isAbsoluteScale() {
@@ -943,12 +943,12 @@ public class StaffGauge extends Pane{
 		this.adaptiveLength = adaptiveLength;
 	}
 
-	public double getUnitLenghtPower() {
-		return unitLenghtPower;
+	public double getUnitLengthPower() {
+		return unitLengthPower;
 	}
 
-	public void setUnitLenghtPower(double unitLenghtPower) {
-		this.unitLenghtPower = unitLenghtPower;
+	public void setUnitLengthPower(double unitLengthPower) {
+		this.unitLengthPower = unitLengthPower;
 	}
 
 	public double getScaleNumberPower() {
@@ -959,28 +959,28 @@ public class StaffGauge extends Pane{
 		this.scaleNumberPower = scaleNumberPower;
 	}
 
-	public boolean isLimitUnitLenght() {
-		return limitUnitLenght;
+	public boolean isLimitUnitLength() {
+		return limitUnitLength;
 	}
 
-	public void setLimitUnitLenght(boolean limitUnitLenght) {
-		this.limitUnitLenght = limitUnitLenght;
+	public void setLimitUnitLength(boolean limitUnitLength) {
+		this.limitUnitLength = limitUnitLength;
 	}
 
-	public double getMaxUnitLenght() {
-		return maxUnitLenght;
+	public double getMaxUnitLength() {
+		return maxUnitLength;
 	}
 
-	public void setMaxUnitLenght(double maxUnitLenght) {
-		this.maxUnitLenght = maxUnitLenght;
+	public void setMaxUnitLength(double maxUnitLength) {
+		this.maxUnitLength = maxUnitLength;
 	}
 
-	public double getMinUnitLenght() {
-		return minUnitLenght;
+	public double getMinUnitLength() {
+		return minUnitLength;
 	}
 
-	public void setMinUnitLenght(double minUnitLenght) {
-		this.minUnitLenght = minUnitLenght;
+	public void setMinUnitLength(double minUnitLength) {
+		this.minUnitLength = minUnitLength;
 	}
 
 	public double getCycleSize() {

@@ -18,7 +18,7 @@ public class LayoutBinder {
 	}
 	
 	public static FXMLLoader bind(Class<?> clazz,String filename,Object root,Object controller) {
-		return bind(clazz.getResource(filename),root,controller);
+		return bind(clazz.getClassLoader().getResource(filename),root,controller);
 	}
 	
 	public static FXMLLoader bind(String className,String filename,Object root,Object controller) throws ClassNotFoundException {
