@@ -36,13 +36,13 @@ import java.util.Set;
  */
 public class StaffGauge extends Pane{
 	
-	public static final double DEFAULT_SCALE_UNIT_FRIST  = 1.0;
+	public static final double DEFAULT_SCALE_UNIT_FIRST = 1.0;
 	public static final double DEFAULT_SCALE_UNIT_SECOND = 10.0;
-	public static final double DEFAULT_UNIT_LENGHT_POWER  = 1.0;
+	public static final double DEFAULT_UNIT_LENGTH_POWER = 1.0;
 	public static final double DEFAULT_SCALE_NUMBER_POWER = 5.0;
-	public static final double DEFAULT_UNIT_LENGHT  = 5.0;
-	public static final double DEFAULT_MAX_UNIT_LENGHT = 16.0;
-	public static final double DEFAULT_MIN_UNIT_LENGHT = 4.0;
+	public static final double DEFAULT_UNIT_LENGTH = 5.0;
+	public static final double DEFAULT_MAX_UNIT_LENGTH = 16.0;
+	public static final double DEFAULT_MIN_UNIT_LENGTH = 4.0;
 	
 	public static final Color DEFAULT_TICK_MARK_COLOR = Color.BLACK;
 	public static final Color DEFAULT_RULE_BACKGROUND_COLOR = Color.web("#E0E0E0");
@@ -71,30 +71,30 @@ public class StaffGauge extends Pane{
 		HORIZONTAL; //水平方向
 	}	
 	
-	private Direction direction;		//标尺方向
+	private Direction direction;		// 标尺方向
 	
-	private double unitLengthPower;     //单位长度放大倍数
-	private double scaleNumberPower;    //刻度数值放大倍数
-	private double scaleUnit[];         //刻度单位,按从小到大排列
-	                                    //计量方案如下: 1.0 - 10.0
-	                                    //意为，每10个单位记录一个大格，每1个单位记录一个小格
-										//主要用于标识数字
+	private double unitLengthPower;     // 单位长度放大倍数
+	private double scaleNumberPower;    // 刻度数值放大倍数
+	private double[] scaleUnit;         // 刻度单位,按从小到大排列
+	                                    // 计量方案如下: 1.0 - 10.0
+	                                    // 意为，每10个单位记录一个大格，每1个单位记录一个小格
+										// 主要用于标识数字
 	
-	private double origin;              //原点位置
-	private double absLTX,absLTY;       //左上角相对于应用的绝对坐标
-	private double absRBX,absRBY;       //右下角相对于应用的绝对坐标
+	private double origin;              // 原点位置
+	private double absLTX,absLTY;       // 左上角相对于应用的绝对坐标
+	private double absRBX,absRBY;       // 右下角相对于应用的绝对坐标
 	
-	private double unitLength;          //单位长度
-	//private double ruleLenght;        //标尺长度(单位为像素)
-	//private double ruleStart,ruleEnd; //标尺的刻度开始显示的位置，结束显示的位置
+	private double unitLength;          // 单位长度
+	//private double ruleLenght;        // 标尺长度(单位为像素)
+	//private double ruleStart,ruleEnd; // 标尺的刻度开始显示的位置，结束显示的位置
 	
-	private boolean limitUnitLength;    //是否限制单位长度[true限制,false不限制]
-	private double maxUnitLength;       //最大单位长度
-	private double minUnitLength;       //最小单位长度
+	private boolean limitUnitLength;    // 是否限制单位长度[true限制,false不限制]
+	private double maxUnitLength;       // 最大单位长度
+	private double minUnitLength;       // 最小单位长度
 	
-	private boolean absoluteScale;      //对刻度取绝对值[true:取绝对值,false:不取绝对值]
-	private boolean showScaleText;      //刻度数值显示
-	private boolean showMarkLine;       //标记线
+	private boolean absoluteScale;      // 对刻度取绝对值[true:取绝对值,false:不取绝对值]
+	private boolean showScaleText;      // 刻度数值显示
+	private boolean showMarkLine;       // 标记线
 	
 	//循环模式
 	public enum CycleMode{
@@ -102,12 +102,12 @@ public class StaffGauge extends Pane{
 		GLOBAL,
 		ADAPTION
 	}
-	private CycleMode cycleScale;       //循环刻度
+	private CycleMode cycleMode;       //循环刻度
 	private double cycleSize;           //周期大小
 	
 	public StaffGauge() {
 		super();
-		init(new double[] {DEFAULT_SCALE_UNIT_FRIST,DEFAULT_SCALE_UNIT_SECOND},
+		init(new double[] {DEFAULT_SCALE_UNIT_FIRST,DEFAULT_SCALE_UNIT_SECOND},
 			0.0,
 			Direction.HORIZONTAL,
 			true,
@@ -168,12 +168,12 @@ public class StaffGauge extends Pane{
 		showScaleText = true;
 		showMarkLine = true;
 		limitUnitLength = true;
-		cycleScale = CycleMode.NONE;
-		unitLengthPower = DEFAULT_UNIT_LENGHT_POWER;
+		cycleMode = CycleMode.NONE;
+		unitLengthPower = DEFAULT_UNIT_LENGTH_POWER;
 		scaleNumberPower = DEFAULT_SCALE_NUMBER_POWER;
-		unitLength = DEFAULT_UNIT_LENGHT;
-		maxUnitLength = DEFAULT_MAX_UNIT_LENGHT;
-		minUnitLength = DEFAULT_MIN_UNIT_LENGHT;
+		unitLength = DEFAULT_UNIT_LENGTH;
+		maxUnitLength = DEFAULT_MAX_UNIT_LENGTH;
+		minUnitLength = DEFAULT_MIN_UNIT_LENGTH;
 		//颜色设置
 		tickMarkColor = DEFAULT_TICK_MARK_COLOR;
 		ruleBackgroundColor = DEFAULT_RULE_BACKGROUND_COLOR;
@@ -314,7 +314,7 @@ public class StaffGauge extends Pane{
 		//刻度数字单位大小设置
 		snp = scaleNumberPower!=0?scaleNumberPower:1;
 		ulp = unitLengthPower !=0? unitLengthPower :1;
-		if(cycleScale == CycleMode.ADAPTION) {
+		if(cycleMode == CycleMode.ADAPTION) {
 			double ruleLenght ;
 			switch(direction) {
 			case VERTICAL:
@@ -396,7 +396,7 @@ public class StaffGauge extends Pane{
 		//计算位置
 		double num = (p - origin)/realUnitLenght;
 		double res = 0d;
-		if(cycleScale!=CycleMode.NONE && cycleSize > 0d) {
+		if(cycleMode !=CycleMode.NONE && cycleSize > 0d) {
 			res = Math.abs(cycleSize + (num*realScaleUnit)%cycleSize)%cycleSize;
 		} else {
 			res = (absoluteScale?Math.abs(num*realScaleUnit):num*scaleUnit[0]);
@@ -590,7 +590,7 @@ public class StaffGauge extends Pane{
 				if(showScaleText) {
 					//填充数字
 					String scaleText;
-					if(cycleScale!=CycleMode.NONE && cycleSize > 0d) {
+					if(cycleMode !=CycleMode.NONE && cycleSize > 0d) {
 						scaleText = 
 								scaleNumberFormat((Math.abs(i*realScaleUnit)%cycleSize));
 					} else {
@@ -634,7 +634,7 @@ public class StaffGauge extends Pane{
 				if(showScaleText) {
 					//填充数字
 					String scaleText;
-					if(cycleScale!=CycleMode.NONE && cycleSize > 0d) {
+					if(cycleMode !=CycleMode.NONE && cycleSize > 0d) {
 						scaleText = 
 								scaleNumberFormat(Math.abs(cycleSize + (i*realScaleUnit)%cycleSize)%cycleSize);
 					} else {
@@ -737,7 +737,7 @@ public class StaffGauge extends Pane{
 				if(showScaleText) {
 					//填充数字
 					String scaleText;
-					if(cycleScale!=CycleMode.NONE && cycleSize > 0d) {
+					if(cycleMode !=CycleMode.NONE && cycleSize > 0d) {
 						scaleText = 
 								scaleNumberFormat((Math.abs(i*realScaleUnit)%cycleSize));
 					} else {
@@ -783,7 +783,7 @@ public class StaffGauge extends Pane{
 				if(showScaleText) {
 					//填充数字
 					String scaleText;
-					if(cycleScale!=CycleMode.NONE && cycleSize > 0d) {
+					if(cycleMode !=CycleMode.NONE && cycleSize > 0d) {
 						scaleText = 
 								scaleNumberFormat(Math.abs(cycleSize + (i*realScaleUnit)%cycleSize)%cycleSize);
 					} else {
@@ -1031,12 +1031,12 @@ public class StaffGauge extends Pane{
 		this.markLineColor = markLineColor;
 	}
 
-	public CycleMode getCycleScale() {
-		return cycleScale;
+	public CycleMode getCycleMode() {
+		return cycleMode;
 	}
 
-	public void setCycleScale(CycleMode cycleScale) {
-		this.cycleScale = cycleScale;
+	public void setCycleMode(CycleMode cycleMode) {
+		this.cycleMode = cycleMode;
 	}
 }
 
