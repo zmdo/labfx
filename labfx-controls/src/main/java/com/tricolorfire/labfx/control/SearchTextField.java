@@ -83,7 +83,7 @@ public class SearchTextField extends BorderPane {
         graphic.fitWidthProperty().bind(heightProperty.multiply(0.6));
         graphic.fitHeightProperty().bind(heightProperty.multiply(0.6));
 
-        try (InputStream stream = SearchTextField.class.getResourceAsStream("/images/filter.png")) {
+        try (InputStream stream = SearchTextField.class.getResourceAsStream("searchTextField/filter.png")) {
             graphic.setImage(new Image(stream));
         } catch (IOException e) {
             throw new RuntimeException(e);

@@ -11,6 +11,7 @@
 
     <modules>
         <module>labfx-controls</module>
+<!--        <module>labfx-graphics</module>-->
     </modules>
 
     <properties>
