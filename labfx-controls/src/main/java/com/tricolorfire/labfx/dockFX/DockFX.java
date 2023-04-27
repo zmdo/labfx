@@ -125,7 +125,9 @@ public class DockFX extends Application {
     DockNode treeDock = new DockNode(generateRandomTree(), "Tree Dock", new ImageView(dockImage));
     treeDock.setPrefSize(100, 100);
     treeDock.dock(dockPane, DockPos.LEFT);
-    treeDock = new DockNode(generateRandomTree(), "Tree Dock", new ImageView(dockImage));
+
+    treeDock = new DockNode(generateRandomTree(), "Tree Dock 2 ", new ImageView(dockImage));
+    treeDock.setClosable(false);
     treeDock.setPrefSize(100, 100);
     treeDock.dock(dockPane, DockPos.RIGHT);
 
